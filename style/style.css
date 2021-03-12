@@ -1,0 +1,90 @@
+/* .logo {
+    display: flex;
+    justify-content: stretch;
+}
+ nav ul {
+    display: flex;
+    margin-right: 50px;
+    margin-top: 15px;
+}
+ nav ul li {
+    padding: 10px 15px ;
+    list-style-type: none;
+   
+} */
+header {
+    background-image: url(/img/bg.jpg);
+    height: 80vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+#posi {
+position: absolute;
+top: 50%;
+  width: 100%;
+  text-align: center;
+}
+#posi ul {
+    position: absolute;
+    top: 100%;
+      
+      text-align: center;
+      list-style-type: none;
+      left: 30%;
+
+    }  
+
+.icn i {
+    font-size: 50px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: rgb(84, 160, 223) ;
+}
+.icn div{
+    border: 1px solid rgba(78, 76, 76, 0.144);
+    padding: 10px;
+}
+.pd {
+    padding: 25px;
+    background-color:rgb(84, 160, 223) ;
+}
+.pdt{
+    padding: 40px;
+    background-color:rgb(84, 160, 223) ;
+}
+.pdt h2{
+   color: white;}
+
+.information {
+border-radius: 10px;
+background-color: rgb(84, 160, 223) ;
+padding: 20px;
+height: 55vh;
+display: none;
+
+}
+.information span {
+    font-size: 20px;
+    color: white;
+
+}
+small {
+    display: block;
+    line-height: 1.8rem;
+    font-size: 20px;
+    color: white;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.titre {
+    color: white;
+}
+
+#cityDiv{
+    width: 60%;
+    margin: auto;
+    text-align: center;
+}
+#error {
+    color: tomato;
+}

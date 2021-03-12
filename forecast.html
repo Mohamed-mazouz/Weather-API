@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather App - Forecast</title>
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="style/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+    integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+    
+</head>
+<body>
+    <nav id="navbar-example2" class="navbar navbar-light bg-light px-3 p-0">
+        <a style="color: rgb(84, 160, 223);" class="navbar-brand " href="index.html"> <img class="mx-3" src="/img/logo.png" alt="" >weather App</a>
+        <ul class="nav nav-pills">
+          <li class="nav-item">
+            <a class="nav-link" href="current.html">current</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="forecast.html">Forecast</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#mdo">Open weather Map</a>
+          </li>
+          
+        </ul>
+      </nav>
+
+      <div class="container-fluid">
+        <div class="row">
+            <div class="pdt text-center">
+               <h2> GET Current Weather Forecast</h2> 
+            </div>
+        </div>
+       </div>
+
+<div class="container" style="height:1350px;">
+    <div class="row" >
+        <div class="col-md-12" style="margin-bottom:10px;">
+            <h3 class="text-center text-primary">Enter City Name</h3>
+            <span id="error" class="text-center"></span>
+        </div>
+        
+        <div class="row form-group form-inline" id="cityDiv">
+           
+            <input type="text" name="city" id="city" class="form-control" placeholder="Enter city name" >
+            <input type="text" name="days" id="days" class="form-control" placeholder="Number: Min - 1 & Max - 16" >
+            <button id="submitForecast" class="btn btn-primary">Search City</button>
+        </div>
+
+    </div>
+    
+    <div class="row" style="margin-top:30px">
+        <table class="table table-bordered">
+           <div id="header"  class="text-center"></div>
+           
+            <thead>
+                <tr>
+                    <th>Icon</th>
+                    <th>Weather</th>
+                    <th>Description</th>
+                    <th>Morning Temperature</th>
+                    <th>Night Temperature</th>
+                    <th>Min. Temperature</th>
+                    <th>Max. Temperature</th>
+                    <th>Pressure</th>
+                    <th>Humidity</th>
+                    <th>Wind Speed</th>
+                    <th>Wind Direction</th>
+                </tr>
+            </thead>
+            
+            <tbody id="forecastWeather">
+                
+            </tbody>
+            
+        </table>
+    </div>
+    
+</div>
+
+<div class="footer">
+    <div class="container">
+        <div class="row text-center" style="padding-top:30px;">
+            <p style="color:white">Copyright &copy; Weather App</p>
+        </div>
+    </div>
+</div>
+
+
+ 
+     
+  
+<script src="/js/jquery.js"></script>   
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>   
+     
+<script src="/js/app.js"></script>   
+      
+</body>
+</html>
