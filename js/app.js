@@ -16,16 +16,16 @@ $(document).ready(function () {
     
             success: function (data) {
                 console.log(data);
-                $(".information").show("slow");
+                
                 $(".titre").text("Current Weather for "+ville+","+data.sys.country)
                  
-                $("#temperature").text(data.main.temp+ " °") 
+                $("#temperature").text(data.main.temp+ "°") 
                  
                  $("#hum").text(data.main.humidity+"%")
 
-                 $("#mintemp").text(data.main. temp_min+ " ° ") 
+                 $("#mintemp").text(data.main.temp_min+ "°") 
 
-                 $("#maxtemp").text(data.main.temp_max+ " ° ") 
+                 $("#maxtemp").text(data.main.temp_max+ "°") 
 
                   $("#latitude").text(data.coord.lat)
 
@@ -37,8 +37,8 @@ $(document).ready(function () {
 
                   $("#derection").text(data.wind.deg)
                  
+                  $(".information").show("slow");
                   
-                 
                 },
                 error: function (){
                      
@@ -48,20 +48,22 @@ $(document).ready(function () {
         }
     
             });
-
-
-
-
-
     })
     
+
+    //--------------------------tableau weather--------------------
+
     $("#submitForecast").click(function () {
         let ville = $("#city").val(); 
         let jours = $("#days").val();
         console.log(ville)
         console.log(jours)
+        $("#forecastWeather").show("slow")
         let tbody = $("#forecastWeather").html("")
-       let urld = "http://api.openweathermap.org/data/2.5/forecast/daily?q=" + ville +"&cnt="+ jours +"&appid=" + "c10bb3bd22f90d636baa008b1529ee25"+ "&units=metric";
+       
+        
+        
+       let urld = "http://api.openweathermap.org/data/2.5/forecast/daily?q=" + ville +"&cnt="+ jours +"&appid=" + "c10bb3bd22f90d636baa008b1529ee25" + "&units=metric";
       
        $.ajax({
            
@@ -71,15 +73,14 @@ $(document).ready(function () {
 
         success: function (data) {
             console.log(data)
-           console.log(data.list[0].weather[0])
              
-        
             
              let tbody = $("#forecastWeather")
               
              for(let i=0 ; i<=jours ; i++){
-              
-                let tr ="<tr><td><img src=https://openweathermap.org/img/w/"+ data.list[i].weather[0].icon+".png /></td>" + 
+              today= new Date();
+              today.setDate(today.getDate()+i);
+                let tr ="<tr><td>" + today + "</td> <td>"+"<img src=https://openweathermap.org/img/w/"+ data.list[i].weather[0].icon+".png /></td>" + 
                     "<td>" + data.list[i].weather[0].main + "</td>" + "<td>" + data.list[i].weather[0].description +"</td>" 
                     +"<td>" + data.list[i].feels_like.morn +"°C"+ "</td>" + "<td>"+ data.list[i].feels_like.night +"°C"+"</td>"+
                      "<td>"+ data.list[i].temp.min + "°C"+"</td>"+ "<td>"+data.list[i].temp.max +"</td>"+
@@ -87,12 +88,9 @@ $(document).ready(function () {
                      "<td>"+ data.list[i].speed+"</td>"+"<td>"+ data.list[i].deg+"</td>"+"</tr>"
                  
                  tbody.append(tr);
-                 
-                 
                 
              }
-             
-             
+           
             },
 
     })
@@ -102,7 +100,7 @@ $(document).ready(function () {
 
        
     });
-
+//-----------------------animation string
       
     setTimeout(function(){
         $("#txt").typed({

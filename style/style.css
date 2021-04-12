@@ -13,41 +13,60 @@
    
 } */
 header {
-    background-image: url(/img/bg.jpg);
-    height: 80vh;
+    background-image: url(/img/w.jpg);
+    opacity: 1;
+    height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
 }
 #posi {
 position: absolute;
-top: 50%;
+top: 40%;
   width: 100%;
   text-align: center;
+}
+ #navbar-example2 {
+    background-color: rgba(43, 125, 192, 0.425);
+    padding: 30px;
+    
+}
+
+nav ul li a {
+    color: rgb(255, 255, 255);
+    
 }
 #posi ul {
     position: absolute;
     top: 100%;
-      
+      color: white;
       text-align: center;
       list-style-type: none;
       left: 30%;
 
     }  
 
+
+
 .icn i {
     font-size: 50px;
     margin-top: 15px;
     margin-bottom: 15px;
-    color: rgb(84, 160, 223) ;
+    color: #383b40 ;
 }
 .icn div{
     border: 1px solid rgba(78, 76, 76, 0.144);
     padding: 10px;
 }
+.icn div:hover{
+    
+    background-color: rgb(84, 160, 223);
+}
 .pd {
     padding: 25px;
     background-color:rgb(84, 160, 223) ;
+    color: white;
+    text-align: center;
 }
 .pdt{
     padding: 40px;
@@ -63,15 +82,19 @@ padding: 20px;
 height: 55vh;
 display: none;
 
+
 }
 .information span {
-    font-size: 20px;
+    font-size: 18px;
     color: white;
+    ;
 
 }
 small {
     display: block;
+    
     line-height: 1.8rem;
+    
     font-size: 20px;
     color: white;
 font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -79,7 +102,19 @@ font-family: Verdana, Geneva, Tahoma, sans-serif;
 .titre {
     color: white;
 }
+.titre_city {
+ 
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
 
+}
+.input {
+   margin-right: 20px;
+    width: 200px;
+   outline: 0;
+   border:none;
+   border-bottom: 1px solid black;
+}
 #cityDiv{
     width: 60%;
     margin: auto;
@@ -87,4 +122,8 @@ font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 #error {
     color: tomato;
+}
+tbody td {
+    color: rgb(20, 39, 75);
+    font-weight: bolder;
 }
